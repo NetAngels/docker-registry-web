@@ -1,7 +1,7 @@
 package docker.registry.acl
 
 enum AccessLevel {
-  NONE, PULL('pull'), PUSH('pull', 'push'), ADMIN('pull', 'push', '*'), UI_DELETE('ui-delete')
+  NONE, PULL('pull'), PUSH('pull', 'push'), ADMIN('pull', 'push', '*'), UI_DELETE('ui-delete'), CATALOG('catalog')
 
   AccessLevel(String... access) {
     this.actions = (access as List).asImmutable()
